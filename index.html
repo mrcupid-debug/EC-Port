@@ -28,7 +28,7 @@ body{background:#0d0d0d;color:#fff;font-family:var(--mono);overflow-x:hidden}
 #progress{position:fixed;top:0;left:0;height:2px;background:var(--red);width:0%;z-index:300;box-shadow:0 0 6px var(--red)}
 #logo-bar{position:fixed;top:1.2rem;left:1.8rem;z-index:200;display:flex;align-items:center;gap:10px}
 #logo-bar img{height:24px;filter:brightness(1.2)}
-#logo-bar .logo-name{font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:#444;border-left:1px solid #2a2a2a;padding-left:10px}
+#logo-bar .logo-name{font-size:8px;letter-spacing:0.3em;text-transform:uppercase;color:#fff;border-left:1px solid #2a2a2a;padding-left:10px}
 
 /* ── NAV DOTS ── */
 #nav-dots{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;gap:12px}
@@ -132,7 +132,7 @@ body{background:#0d0d0d;color:#fff;font-family:var(--mono);overflow-x:hidden}
 .edu-degree{font-size:8px;color:#555;letter-spacing:.06em;line-height:1.7}
 .cert-item{margin-top:.7rem;padding:.7rem 1rem;background:rgba(227,0,27,.03);border:1px solid rgba(227,0,27,.1)}
 .cert-name{font-size:9px;color:#bbb;margin-bottom:2px}
-.cert-detail{font-size:7px;color:#444;letter-spacing:.1em}
+.cert-detail{font-size:7px;color:#fff;letter-spacing:.1em}
 
 /* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.2rem}
@@ -150,7 +150,7 @@ body{background:#0d0d0d;color:#fff;font-family:var(--mono);overflow-x:hidden}
 }
 .panel-inner.overflowing .scroll-hint{opacity:1}
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 425px) {
   .panel-inner {
     width: 100%;
     max-width: 100%;
@@ -159,9 +159,22 @@ body{background:#0d0d0d;color:#fff;font-family:var(--mono);overflow-x:hidden}
     padding: 0;
     scrollbar-width: thin;
     scrollbar-color: rgba(227, 0, 27, 0.5) rgba(255, 255, 255, 0.04);
+  }
+
+  .panel-inner::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .panel-inner::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .panel-inner::-webkit-scrollbar-thumb {
+    background-color: rgba(227, 0, 27, 0.5);
+    border-radius: 4px;
+  }
 }
 
-}
 
 </style>
 </head>
